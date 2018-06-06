@@ -1,0 +1,5 @@
+export const SHOW_MOVIE = 'SHOW_MOVIE';
+export const ADD_TO_WATCHED = 'ADD_TO_WATCHED';
+export const REMOVE_FROM_WATCHED = 'REMOVE_FROM_WATCHED';
+export const USER_RATING = 'USER_RATING';
+

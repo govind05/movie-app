@@ -1,0 +1,48 @@
+.Movie {
+    margin: 30px 10%;
+    text-align: left;
+}
+
+.Movie>div {
+    display: flex;
+    flex-direction: row;
+}
+
+.Movie>div>div {
+    margin: 15px 16px;
+}
+
+.Movie>div>div span {
+    font-weight: bolder;
+}
+
+.Movie>div>div h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.Movie>div>div .Date {
+    margin-top: 0;
+    color: #666;
+    font-weight: bolder;
+}
+
+.Movie>div>div .Ratings {
+    display: flex;
+}
+
+.Movie>div>div .Ratings>div {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.Movie>div>div>div .Watched {
+    background-color: rgb(195, 252, 109);
+    text-align: center;
+    margin: 0 6px;
+    padding: 5px 20px;
+    font-size: 20px;
+    color: #333;
+}
+
