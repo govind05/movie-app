@@ -10,13 +10,25 @@ import { showMovie } from './store/actions/movie';
 
 class App extends Component {
   state = {
-    movieName: 'Batman',
+    movieName: '',
+    notFound: false
   }
 
   onSubmit = (e) => {
     e.preventDefault();
     axios.get(`http://www.omdbapi.com/?t=${this.state.movieName}&apikey=aabca0d`)
-      .then(res => this.props.showMovie(res.data));
+      .then(res => {
+        if (res.data.Response === 'False') {
+          this.setState({
+            notFound: true
+          });
+        } else {
+          this.setState({
+            notFound: false
+          });
+          this.props.showMovie(res.data);
+        }
+      });
   }
 
   onChange = (e) => {
@@ -24,6 +36,7 @@ class App extends Component {
       movieName: e.target.value
     })
   }
+
   render() {
     return (
       <div className="App">
@@ -40,9 +53,13 @@ class App extends Component {
        */}
         <div className="SearchBar">
           <p>Movies</p>
-          <SearchBar onChange={this.onChange} onSubmit={this.onSubmit} />
+          <SearchBar
+            onChange={this.onChange}
+            onSubmit={this.onSubmit}
+          />
         </div>
-        <Movie />
+        {this.state.notFound ? <h1>Movie Not Found....</h1> :
+          <Movie />}
         {this.state.movieName ? <hr /> : null}
         <Watched />
       </div>

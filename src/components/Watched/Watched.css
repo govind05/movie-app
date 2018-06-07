@@ -19,50 +19,61 @@
 }
 
 .Item p {
+    display: flex;
+    flex-direction: column;
     color: white;
     background: rgba(0, 0, 0, 0.69);
     opacity: 0;
     position: absolute;
-    top: -20px;
+    top: -24px;
     transition: all 300ms ease-in-out;
     width: 100%;
     word-wrap: break-word;
     padding: 10px 0;
-    font-size: 20px;
+    font-size: 22px;
+    text-align: left;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.Item p span {
+    font-size: 16px;
+    font-weight: lighter;
 }
 
 .Item div {
-    display: flex;
-    flex-direction: column;
-    justify-content: right;
-    align-items: flex-end;
+    background: rgba(0, 0, 0, 0.59);
     color: white;
     opacity: 0;
     position: absolute;
-    bottom: 0px;
+    bottom: 10px;
     transition: all 300ms ease-in-out;
-    width: 100%;
     word-wrap: break-word;
     padding: 10px 0;
     font-size: 20px;
-    height: 40px;
+    margin-left: 70%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10%;
 }
 
-.Item div span{
-  cursor: pointer;
-  
+.Item div span {
+    cursor: pointer;
 }
 
 .Item:hover img {
     transition: all 300ms ease-in-out;
-    filter: blur(1px);
     transform: scale(1.03);
     cursor: pointer;
     z-index: 0;
 }
 
-.Item:hover p,
 .Item:hover div {
+    opacity: 1;
+    margin-left: 65%;
+}
+
+.Item:hover p {
     opacity: 1;
 }
 

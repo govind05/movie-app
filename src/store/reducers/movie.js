@@ -6,7 +6,6 @@ const initialState = {
   ratings: '',
   releasedDate: '',
   plot: '',
-  rating: '',
 }
 
 export default (state = initialState, action) => {
@@ -22,12 +21,6 @@ export default (state = initialState, action) => {
         plot: action.data.Plot,
       }
 
-    case USER_RATING: {
-      return{
-        ...state,
-        rating: action.rating
-      }
-    }
     default:
       return state
   }
