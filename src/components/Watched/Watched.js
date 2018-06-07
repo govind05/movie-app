@@ -9,10 +9,12 @@ export class Watched extends Component {
   render() {
     return (
       <div className='Watched'>
+        {/* Checking if there is any watched movie to render watched section. */}
         {this.props.watchedMovies.length ?
           (<div >
             <h1>Watched</h1>
             <div className='List'>
+              {/* Mapping all the watched movies to jsx */}
               {this.props.watchedMovies.map(movie => (
                 <div
                   onClick={() => this.props.onRemoveFromWatched(movie.title)}
@@ -28,6 +30,7 @@ export class Watched extends Component {
                     {movie.title}
                     <span>{movie.releasedDate}</span>
                   </p>
+                  {/* To show the movie rating if any rating exist. */}
                   {
                     !movie.rating
                       ? null

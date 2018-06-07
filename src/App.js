@@ -14,6 +14,7 @@ class App extends Component {
     notFound: false
   }
 
+  //Handling api request when user submits the movie name
   onSubmit = (e) => {
     e.preventDefault();
     axios.get(`http://www.omdbapi.com/?t=${this.state.movieName}&apikey=aabca0d`)

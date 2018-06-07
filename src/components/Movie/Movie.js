@@ -13,12 +13,14 @@ import './Movie.css';
 
 class Movie extends React.Component {
 	render() {
+		// Checking if the movie is watched.
 		const watched = this.props.watched.filter(movie =>
 			movie.title === this.props.title).length;
-
+		// Finding the searched movie from the list of watched movies.
 		const movie = this.props.watched.find(movie =>
 			movie.title === this.props.title);
 
+		// Finding the rating of the movie, if user rated it.
 		const rating = !movie
 			? null : !movie.rating
 				? null
@@ -42,7 +44,10 @@ class Movie extends React.Component {
 							<p>Add to Watched</p>
 						</div>
 						<div>
-							<div style={{ display: 'flex', alignItems: 'center' }}>
+							<div style={{
+								display: 'flex',
+								alignItems: 'center'
+							}}>
 								<h1>{this.props.title}</h1>
 								{watched
 									? <div className='Watched'>Watched</div>
@@ -80,6 +85,7 @@ class Movie extends React.Component {
 									{this.props.plot}
 								</p>
 							</div>
+							{/* If movie is watched show the upvote/downvote button, else render null. */}
 							{
 								watched
 									? (
