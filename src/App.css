@@ -1,8 +1,10 @@
 .App {
     text-align: center;
+    width: 100%;
 }
 
 .SearchBar {
+    width: 100%;
     display: flex;
     background: #333;
     height: 64px;
@@ -24,4 +26,19 @@
 
 .SearchBar input:focus {
     outline: 0;
+}
+
+@media(max-width: 550px){
+    .SearchBar{
+        padding: 0 5px; 
+    }
+    .SearchBar input {
+        width: 70%;
+        max-width: 360px;
+    }
+    
+    .SearchBar p {
+        font-size: 32px;
+        color: white;
+    }
 }

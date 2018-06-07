@@ -102,3 +102,20 @@
     transform: scale(1.5);
     transition: 400ms all ease-out;
 }
+
+@media(max-width: 550px){
+    .Movie>div {
+        display: flex;
+        flex-direction: column;
+    }
+    .Movie>div .Image{
+        margin: auto;
+        text-align: center;
+        height: 240px;
+    }
+
+    .Movie>div .Image img{
+        height: 240px;
+        width: 160px;
+    }
+}
