@@ -62,8 +62,7 @@
 .Movie>div .Image {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    position: relative;
+    height: 300px;
 }
 
 .Movie>div .Image p {
@@ -73,15 +72,14 @@
     color: white;
     background: rgba(0, 0, 0, 0.69);
     opacity: 0;
-    position: absolute;
-    bottom: -20px;
+    position: relative;
+    bottom: 0px;
     transition: all 300ms ease-in-out;
     width: 100%;
     word-wrap: break-word;
     padding: 10px 0;
     font-size: 24px;
     text-align: center;
-    box-sizing: border-box;
 }
 
 .Movie>div .Image:hover img {
@@ -89,14 +87,18 @@
     transform: scale(1.03);
     cursor: pointer;
     z-index: 0;
+    box-shadow: #aaa 6px 10px 6px;
 }
 
 .Movie>div .Image:hover p {
     opacity: 1;
-    bottom: 15px;
+    transform: scale(1.03);
+    bottom: 55px;
 }
-
+.Thumb{
+    margin-right: 10px;
+}
 .Thumb:active {
     transform: scale(2);
-    transition: 300ms all ease-out;
+    transition: 150ms all ease-out;
 }

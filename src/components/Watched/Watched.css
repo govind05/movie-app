@@ -74,6 +74,7 @@
 }
 
 .Item:hover p {
+    transform: scale(1.03);
     opacity: 1;
 }
 
