@@ -1,44 +1,78 @@
 .App {
-    text-align: center;
-    width: 100%;
+  text-align: center;
+  width: 100%;
 }
 
 .SearchBar {
-    width: 100%;
-    display: flex;
-    background: #333;
-    height: 64px;
-    justify-content: space-evenly;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  background: #333;
+  height: 64px;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .SearchBar input {
-    width: 360px;
-    height: 36px;
-    font-size: 20px;
-    padding: 0 10px;
+  width: 360px;
+  height: 36px;
+  font-size: 20px;
+  padding: 0 10px;
 }
 
 .SearchBar p {
-    font-size: 32px;
-    color: white;
+  font-size: 32px;
+  color: white;
 }
 
 .SearchBar input:focus {
-    outline: 0;
+  outline: 0;
 }
 
-@media(max-width: 550px){
-    .SearchBar{
-        padding: 0 5px; 
-    }
-    .SearchBar input {
-        width: 70%;
-        max-width: 360px;
-    }
-    
-    .SearchBar p {
-        font-size: 32px;
-        color: white;
-    }
+.search-msg {
+  font-family: 'Lobster', cursive;
+  font-size: 60px;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  color: #333;
+}
+
+.search-msg div {
+  width: 480px;
+  display: flex;
+}
+
+.search-msg .arrow {
+  transform: rotate(-90deg);
+}
+
+.search-msg .arrow svg {
+  height: 240px;
+  width: 240px;
+  fill: #333;
+}
+
+@media (max-width: 550px) {
+  .SearchBar {
+    padding: 0 5px;
+  }
+  .SearchBar input {
+    width: 70%;
+    max-width: 360px;
+  }
+  .SearchBar p {
+    font-size: 32px;
+    color: white;
+  }
+  .search-msg {
+    font-size: 42px;
+    align-items: flex-start;
+  }
+  .search-msg div {
+    width: 80%;
+  }
+  .search-msg .arrow svg {
+    height: 140px;
+    width: 140px;
+  }
 }

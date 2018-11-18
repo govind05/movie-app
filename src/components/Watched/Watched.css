@@ -1,86 +1,109 @@
 .Watched {
-    text-align: left;
-    margin: 20px 10%;
+  text-align: left;
+  margin: 20px 10%;
 }
 
 .List {
-    display: flex;
-    overflow-y: auto;
+  display: flex;
+  overflow-y: auto;
 }
 
 .List div {
-    margin-right: 15px;
-    text-align: center;
-    font-size: 24px;
+  margin-right: 15px;
+  text-align: center;
+  font-size: 24px;
 }
 
 .Item {
-    position: relative;
+  position: relative;
 }
 
 .Item p {
-    display: flex;
-    flex-direction: column;
-    color: white;
-    background: rgba(0, 0, 0, 0.69);
-    opacity: 0;
-    position: absolute;
-    top: -24px;
-    transition: all 300ms ease-in-out;
-    width: 100%;
-    word-wrap: break-word;
-    padding: 10px 0;
-    font-size: 22px;
-    text-align: left;
-    padding-left: 10px;
-    box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background: rgba(0, 0, 0, 0.69);
+  opacity: 0;
+  position: absolute;
+  top: -24px;
+  transition: all 300ms ease-in-out;
+  width: 100%;
+  word-wrap: break-word;
+  padding: 10px 0;
+  font-size: 22px;
+  text-align: left;
+  padding-left: 10px;
+  box-sizing: border-box;
 }
 
 .Item p span {
-    font-size: 16px;
-    font-weight: lighter;
+  font-size: 16px;
+  font-weight: lighter;
 }
 
 .Item div {
-    background: rgba(0, 0, 0, 0.59);
-    color: white;
-    opacity: 0;
-    position: absolute;
-    bottom: 10px;
-    transition: all 300ms ease-in-out;
-    word-wrap: break-word;
-    padding: 10px 0;
-    font-size: 20px;
-    margin-left: 70%;
-    padding: 10px;
-    box-sizing: border-box;
-    border-radius: 10%;
+  background: rgba(0, 0, 0, 0.59);
+  color: white;
+  opacity: 0;
+  position: absolute;
+  bottom: 10px;
+  transition: all 300ms ease-in-out;
+  word-wrap: break-word;
+  padding: 10px 0;
+  font-size: 20px;
+  margin-left: 70%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 10%;
 }
 
 .Item div span {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .Item:hover img {
-    transition: all 300ms ease-in-out;
-    transform: scale(1.03);
-    cursor: pointer;
-    z-index: 0;
+  transition: all 300ms ease-in-out;
+  transform: scale(1.03);
+  cursor: pointer;
+  z-index: 0;
 }
 
 .Item:hover div {
-    opacity: 1;
-    margin-left: 65%;
+  opacity: 1;
+  margin-left: 65%;
 }
 
 .Item:hover p {
-    transform: scale(1.03);
-    opacity: 1;
+  transform: scale(1.03);
+  opacity: 1;
 }
 
 .Watched>div h1 {
-    font-size: 24px;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #555;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #555;
+}
+
+@media (max-width: 700px) {
+  .Item p {
+    opacity: 1;
+    font-size: 18px;
+  }
+  .Item div {
+    opacity: 1;
+    right: -10px;
+    height: 40px;
+  }
+  .Item p span {
+    font-size: 12px;
+    font-weight: lighter;
+  }
+  .Item img {
+    height: 140px;
+    width: 100px;
+  }
+  .Item svg {
+    height: 24px;
+  }
 }

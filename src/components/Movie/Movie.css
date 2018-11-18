@@ -1,121 +1,125 @@
 .Movie {
-    margin: 30px 10%;
-    text-align: left;
+  margin: 30px 10%;
+  text-align: left;
 }
 
 .Movie>div {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .Movie>div>div {
-    margin: 15px 16px;
+  margin: 15px 16px;
 }
 
 .Movie>div>div span {
-    font-weight: bolder;
+  font-weight: bolder;
 }
 
 .Movie>div>div h1 {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .Movie>div>div .Date {
-    margin-top: 0;
-    color: #666;
-    font-weight: bolder;
+  margin-top: 0;
+  color: #666;
+  font-weight: bolder;
 }
 
 .Movie>div>div .Ratings {
-    display: flex;
+  display: flex;
 }
 
 .Movie>div>div .Ratings>div {
-    display: flex;
-    flex-direction: column;
-    margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
 }
 
 .Movie>div>div>div .Watched {
-    background-color: rgb(195, 252, 109);
-    text-align: center;
-    margin: 0 6px;
-    padding: 5px 20px;
-    font-size: 20px;
-    color: #333;
-    animation: watchedAnimation 300ms ease-in-out;
+  background-color: rgb(195, 252, 109);
+  text-align: center;
+  margin: 0 6px;
+  padding: 5px 20px;
+  font-size: 20px;
+  color: #333;
+  animation: watchedAnimation 300ms ease-in-out;
 }
 
 @keyframes watchedAnimation {
-    0% {
-        transform: scale(0.8);
-    }
-    75% {
-        transform: scale(1.2);
-    }
-    100% {
-        transform: scale(1);
-    }
+  0% {
+    transform: scale(0.8);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .Movie>div .Image {
-    margin: 0;
-    padding: 0;
-    height: 300px;
+  margin: 0;
+  padding: 0;
+  height: 300px;
 }
 
 .Movie>div .Image p {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    color: white;
-    background: rgba(0, 0, 0, 0.69);
-    opacity: 0;
-    position: relative;
-    bottom: 0px;
-    transition: all 300ms ease-in-out;
-    width: 100%;
-    word-wrap: break-word;
-    padding: 10px 0;
-    font-size: 24px;
-    text-align: center;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background: rgba(0, 0, 0, 0.69);
+  opacity: 0;
+  position: relative;
+  bottom: 0px;
+  transition: all 300ms ease-in-out;
+  width: 100%;
+  word-wrap: break-word;
+  padding: 10px 0;
+  font-size: 24px;
+  text-align: center;
 }
 
 .Movie>div .Image:hover img {
-    transition: all 300ms ease-in-out;
-    transform: scale(1.03);
-    cursor: pointer;
-    z-index: 0;
-    box-shadow: #aaa 6px 10px 6px;
+  transition: all 300ms ease-in-out;
+  transform: scale(1.03);
+  cursor: pointer;
+  z-index: 0;
+  box-shadow: #aaa 6px 10px 6px;
 }
 
 .Movie>div .Image:hover p {
-    opacity: 1;
-    transform: scale(1.03);
-    bottom: 55px;
+  opacity: 1;
+  transform: scale(1.03);
+  bottom: 55px;
 }
-.Thumb{
-    margin-right: 10px;
+
+.Thumb {
+  margin-right: 10px;
 }
+
 .Thumb:active {
-    transform: scale(1.5);
-    transition: 400ms all ease-out;
+  transform: scale(1.5);
+  transition: 400ms all ease-out;
 }
 
-@media(max-width: 550px){
-    .Movie>div {
-        display: flex;
-        flex-direction: column;
-    }
-    .Movie>div .Image{
-        margin: auto;
-        text-align: center;
-        height: 240px;
-    }
-
-    .Movie>div .Image img{
-        height: 240px;
-        width: 160px;
-    }
+@media (max-width: 550px) {
+  .Movie>div {
+    display: flex;
+    flex-direction: column;
+  }
+  .Movie>div .Image {
+    margin: auto;
+    text-align: center;
+    height: 240px;
+  }
+  .Movie>div .Image img {
+    height: 240px;
+    width: 160px;
+  }
+  .Movie>div .Image:hover p {
+    opacity: 0;
+  }
 }

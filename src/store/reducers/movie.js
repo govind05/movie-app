@@ -1,4 +1,4 @@
-import { SHOW_MOVIE, USER_RATING } from '../actions/actionTypes';
+import { SHOW_MOVIE } from '../actions/actionTypes';
 
 const initialState = {
   title: '',
@@ -6,11 +6,10 @@ const initialState = {
   ratings: '',
   releasedDate: '',
   plot: '',
-}
+};
 
 export default (state = initialState, action) => {
   switch (action.type) {
-
     case SHOW_MOVIE:
       return {
         ...state,
@@ -19,9 +18,9 @@ export default (state = initialState, action) => {
         ratings: action.data.Ratings,
         releasedDate: action.data.Released,
         plot: action.data.Plot,
-      }
+      };
 
     default:
-      return state
+      return state;
   }
-}
+};
